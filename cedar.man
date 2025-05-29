@@ -1,0 +1,124 @@
+.TH CEDAR 1 "May 2025" "Cedar Programming Language Manual"
+.SH NAME
+cedar \- High-level, Executable-Oriented Programming Language
+
+.SH SYNOPSIS
+.B cedarc
+[\fIoptions\fR] \fIinput.cdr\fR
+
+.SH DESCRIPTION
+Cedar is a modern programming language featuring:
+- High-level readable syntax, low-level performance
+- Dynamic indentation-based scoping
+- Intrinsic punctuation for logic flow
+- Human-friendly, double-spaced code blocks
+- Intuitive logic inlining
+- Modular passive and aggressive constructs
+
+The Cedar compiler (\fBcedarc\fR) compiles `.cdr` source files into LLVM IR, then into NASM x64 assembly, finally outputting native machine code binaries (`.exe`, `.elf`, `.bin`).
+
+.SH GRAMMAR & SYNTAX
+.PP
+.TP
+Indentation
+Dynamic, context-based. Minimum two-space indent for block scope.
+.TP
+Punctuation
+Intrinsic:
+- `:` declares or labels
+- `->` function return arrow
+- `..` numeric range
+- `+`, `-`, `*`, `/` operators
+- `{}` optional for inline nest
+
+.TP
+Spacing
+Double-space between declarations and logic flows. Line breaks and spacing are significant.
+
+.SH RESERVED WORDS
+start, end, define, structure, inherit, branch, proof, truth, texture, route, channel, linker, modifier, repeat, until, echo, await, emit, within, begin, halt
+
+.SH CORE CONSTRUCTS
+.TP
+Passive:
+proof, truth, texture, modifier, linker, route, channel
+.TP
+Aggressive:
+branch, inherit, structure
+
+.SH EXAMPLES
+
+.SS Hello World
+
+.EX
+start
+
+define greet -> void :
+
+  echo "Hello, from Cedar."
+
+end
+.EE
+
+.SS Function With Inheritance
+
+.EX
+structure Person :
+
+  name: string
+  age: int
+
+end
+
+inherit Programmer from Person :
+
+  language: string
+
+end
+
+define introduce(person: Programmer) -> void :
+
+  echo "Name: " + person.name
+  echo "Lang: " + person.language
+
+end
+.EE
+
+.SS Conditional Branch
+
+.EX
+define voteCheck(age: int) -> void :
+
+  branch age >= 18 :
+
+    echo "Eligible to vote."
+
+  else :
+
+    echo "Too young."
+
+  end
+
+end
+.EE
+
+.SH COMPILER OPTIONS
+
+.TP
+.B cedarc input.cdr
+Compile Cedar code to executable.
+.TP
+.B cedarc -o output.exe input.cdr
+Specify output filename.
+
+.SH FILES
+.TP
+.I .cdr
+Cedar source file extension
+
+.SH BUGS
+Report issues at https://github.com/JoeySoprano420/CedarLang
+
+.SH AUTHOR
+Violet Aura Creations, 2025
+
