@@ -1,0 +1,7 @@
+start
+
+define greet -> void :
+
+  echo "Hello, from Cedar."
+
+end
