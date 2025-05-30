@@ -1,0 +1,13 @@
+define voteCheck(age: int) -> void :
+
+  branch age >= 18 :
+
+    echo "Eligible to vote."
+
+  else :
+
+    echo "Too young."
+
+  end
+
+end
