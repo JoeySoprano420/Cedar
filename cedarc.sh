@@ -1,0 +1,14 @@
+/cedar
+  /src
+    cedar_lexer.c
+    cedar_parser.c
+    cedar_ast.c
+    cedar_codegen.c
+    cedar_linker.c
+  /ir
+    llvm_backend.c
+  /bin
+    cedarc.exe
+/docs
+    cedar.man
+    cedar.syntax.pdf
