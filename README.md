@@ -33,4 +33,4 @@ Run `CedarLangInstaller.exe` to install the compiler on Windows.
 ## Maintained by
 **Violet Aura Creations**
 
-MIT License
+Modified Quick-Sample-Reference Long-code (QSRLC) License V2.0
