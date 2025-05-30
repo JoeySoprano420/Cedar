@@ -1,0 +1,21 @@
+structure Person :
+
+  name: string
+  age: int
+
+end
+
+
+inherit Programmer from Person :
+
+  language: string
+
+end
+
+
+define introduce(person: Programmer) -> void :
+
+  echo "Name: " + person.name
+  echo "Lang: " + person.language
+
+end
